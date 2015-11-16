@@ -6,4 +6,9 @@
     导包:android.support.v4.app.FragmentActivity;
     (3)动态加载时是getSupportFragmentManager而不是getFragmentManager
     
-    
+    (4)动态加载Fragment步骤：
+    // 注意：這裡用的都是support.v4包中的函数和类型
+      AnotherRightFragment arf = new AnotherRightFragment();
+			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+			ft.replace(R.id.right, arf);
+			ft.commit();

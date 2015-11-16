@@ -1,0 +1,9 @@
+低版本使用Fragment出错:
+  
+    Fragment是在3.0版本开始才添加的,所以最低版本小于11时,使用支持包android-support-v4.jar里面的Fragment,
+    (1)使用包:iandroid.support.v4.app.Fragment;而不是： android.app.Fragment;
+    (2)Activity必须是继承FragmentActivity
+    导包:android.support.v4.app.FragmentActivity;
+    (3)动态加载时是getSupportFragmentManager而不是getFragmentManager
+    
+    
